@@ -1,61 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.min.css">
-</head>
-<body>
-  <div class="wrapper">
-    <section class="chat">
-      <section class="chat__addressee">
-        <img class="chat__big-photo" src="img/addressee.png" width="45" height="45" alt="Фото получателя" >
-        <div class="chat__addressee-info">
-          <h1 class="chat__addressee-title">Токсикова Ольга</h1>
-          <p class="chat__addressee-city">Днепропетровск</p>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preload" href="fonts/PTSans-Bold.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="chat">
+        <section class="chat__addressee">
+          <img class="chat__photo chat__photo--big chat__photo--chat-addressee" src="img/addressee.png" width="45" height="45" alt="Фото получателя">
+          <div class="chat__addressee-info">
+            <h1 class="chat__addressee-title">Токсикова Ольга</h1>
+            <p class="chat__addressee-city text">Днепропетровск</p>
+          </div>
+          <div class="chat__rating rating">
+            <input class="visually-hidden" type="radio" name="rating" id="rating-5">
+            <label class="rating__label" for="rating-5"></label>
+            <input class="visually-hidden" type="radio" name="rating" id="rating-4">
+            <label class="rating__label" for="rating-4"></label>
+            <input class="visually-hidden" type="radio" name="rating" id="rating-3">
+            <label class="rating__label" for="rating-3"></label>
+            <input class="visually-hidden" type="radio" name="rating" id="rating-2">
+            <label class="rating__label" for="rating-2"></label>
+            <input class="visually-hidden" type="radio" name="rating" id="rating-1">
+            <label class="rating__label" for="rating-1"></label>
+          </div>
+          <button class="chat__close-btn close-btn" type="button"></button>
+        </section>
+
+        <div class="chat__messages js-messages-container">
+          <ul class="chat__messages-list list js-messages-list">
+            <li class="chat__messages-item">
+              <img class="chat__photo chat__photo--messages" src="img/addressee.png" alt="Фото получателя">
+              <p class="chat__messages-text text">Где взять на прокат вечернее кvрасивое платье? А еще лучше дизайнерское! Предстоит участие в <a class="link" href="#">мероприятии</a>, где все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато, да и жалко на один раз такие деньжищи отваливать. Мне </p>
+              <time class="chat__date-time" datetime="T"><span>вчера </span>в<span> 17.45</span></time>
+            </li>
+            <li class="chat__messages-item chat__messages-item--user">
+              <img class="chat__photo chat__photo--messages" src="img/user.png" alt="Фото пользователя">
+              <p class="chat__messages-text text">Поисковик вам в помощь! Но цена примерно в половину стоимости платья.</p>
+              <time class="chat__date-time" datetime="T"><span>вчера </span>в<span> 18.45</span></time>
+            </li>
+            <li class="chat__messages-item">
+              <img class="chat__photo chat__photo--messages" src="img/addressee.png" alt="Фото получателя">
+              <p class="chat__messages-text text">Где взять на прокат вечернее красивое платье? А еще лучше дизайнерское! Предстоит участие в мероприятии, где все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато</p>
+              <time class="chat__date-time" datetime="T"><span>сегодня </span>в<span> 17.45</span></time>
+            </li>
+            <li class="chat__messages-item chat__messages-item--user">
+              <img class="chat__photo chat__photo--messages" src="img/user.png" alt="Фото пользователя">
+              <p class="chat__messages-text text">Поисковик вам в помощь! Но цена примерно в половину стоимости платья.</p>
+              <time class="chat__date-time" datetime="T"><span>сегодня </span>в<span> 18.45</span></time>
+            </li>
+            <li class="chat__messages-item">
+              <img class="chat__photo chat__photo--messages" src="img/addressee.png" alt="Фото получателя">
+              <p class="chat__messages-text text">Где взять на прокат вечернее красивое платье? А еще лучше дизайнерское! Предстоит участие в мероприятии, где все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато</p>
+              <time class="chat__date-time" datetime="T"><span>сегодня </span>в<span> 17.45</span></time>
+            </li>
+            <li class="chat__messages-item chat__messages-item--user">
+              <img class="chat__photo chat__photo--messages" src="img/user.png" alt="Фото пользователя">
+              <p class="chat__messages-text text">Поисковик вам в помощь! Но цена примерно в половину стоимости платья.</p>
+              <time class="chat__date-time" datetime="T"><span>сегодня </span>в<span> 18.45</span></time>
+            </li>
+          </ul>
         </div>
-        <div class="chat__rating rating">
-          <input class="visually-hidden" type="radio" name="rating" id="rating-5">
-          <label class="rating__label" for="rating-5"></label>
-          <input class="visually-hidden" type="radio" name="rating" id="rating-4">
-          <label class="rating__label" for="rating-4"></label>
-          <input class="visually-hidden" type="radio" name="rating" id="rating-3">
-          <label class="rating__label" for="rating-3"></label>
-          <input class="visually-hidden" type="radio" name="rating" id="rating-2">
-          <label class="rating__label" for="rating-2"></label>
-          <input class="visually-hidden" type="radio" name="rating" id="rating-1">
-          <label class="rating__label" for="rating-1"></label>
+
+        <div class="chat__footer">
+          <img class="chat__photo chat__photo--big chat__photo--chat-footer" width="45" height="45" src="img/user.png" alt="Фото пользователя">
+          <form class="chat__form" action="#" method="POST">
+            <textarea class="chat__form-textarea js-textarea" name="chat__textarea" id="textarea" rows="4"></textarea>
+            <button class="chat__form-button js-submit-btn" type="submit">Отправить</button>
+          </form>
         </div>
-        <button class="chat__close-btn close-btn" type="button"></button>
       </section>
+    </div>
+    <script src="js/libs/OverlayScrollbars.min.js"></script>
+    <script src="js/script.min.js"></script>
+  </body>
 
-      <div class="chat__messages">
-        <ul class="chat__messages-list">
-          <li class="chat__messages-item">
-            <img class="chat__messages-pic" src="img/addressee.png" alt="Фото получателя">
-            <p class="chat__message-text">Где взять на прокат вечернее кvрасивое платье? А еще лучше дизайнерское! Предстоит участие в <a class="link" href="#">мероприятии</a>, где все гости будут наверняка одеты в наряды "от кутюр", а у меня со средствами туговато, да и жалко на один раз такие деньжищи отваливать. Мне </p>
-            <time class="date-time" datetime="T"><span>вчера</span><span>17.45</span></time>
-          </li>
-          <li class="chat__messages-item">
-            <img class="chat__messages-pic" src="img/user.png" alt="Фото пользователя">
-            <p class="chat__message-text">Поисковик вам в помощь! Но цена примерно в половину стоимости платья.</p>
-            <time class="date-time" datetime="T"><span>вчера</span><span>18.45</span></time>
-          </li>
-        </ul>
-      </div>
-
-      <div class="chat__footer">
-        <img class="chat__big-photo" width="45" height="45" src="img/user.png" alt="Фото пользователя">
-        <form action="#" method="POST" class="chat__form">
-          <textarea class="chat__form-textarea" name="chat__textarea" id="textarea" rows="4"></textarea>
-          <button class="chat__form-button" type="submit">Отправить</button>
-        </form>
-      </div>
-    </section>
-  </div>
-  <script src="js/script.min.js"></script>
-</body>
 </html>

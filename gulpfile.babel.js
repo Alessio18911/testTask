@@ -53,7 +53,7 @@ function js() {
     .pipe(plugins.jsmin())
     .pipe(plugins.rename({ suffix: ".min" }))
     .pipe(dest("build/js", { sourcemaps: "."}))
-    .pipe(src("source/js/plugins/*", { base: "source" }))
+    .pipe(src("source/js/libs/*", { base: "source" }))
     .pipe(dest("build/"));
 }
 

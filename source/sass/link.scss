@@ -1,4 +1,33 @@
 .link {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
   font-weight: 700;
   color: $blue3;
+  letter-spacing: -0.3px;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+    color: $blue1;
+
+    &::after {
+      background-color: $blue1;
+    }
+  }
+
+  &:active::after {
+    background-color: transparent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $blue3;
+    transition: background-color 0.2s ease-in-out;
+  }
 }
