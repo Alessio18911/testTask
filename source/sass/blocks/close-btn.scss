@@ -1,0 +1,59 @@
+.close-btn {
+  position: relative;
+  width: 23px;
+  height: 23px;
+  background-color: transparent;
+  border: 2px solid $grey6;
+  border-radius: 50%;
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $orange;
+    cursor: url(../../img/hand.png), auto;
+
+    &::before,
+    &::after {
+      background-color: $orange;
+      transform: rotate(0);
+    }
+  }
+
+  &:active {
+    border-color: $red;
+
+    &::before,
+    &::after {
+      background-color: $red;
+    }
+  }
+
+  &:disabled {
+    border-color: $grey8;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      background-color: $grey8;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 12px;
+    background-color: $grey6;
+    transition: 0.3s ease-in-out;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

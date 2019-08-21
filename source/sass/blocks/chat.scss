@@ -1,0 +1,63 @@
+.chat {
+  position: relative;
+  width: 600px;
+  height: 550px;//временно, потом удалить
+  padding: 11px 0 0;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0px 1px 16.02px 1.98px $grey10;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 11px;
+    background-image: repeating-linear-gradient(-57deg, $white 0, $white 9px, $blue1 9px, $blue1 18px, $white 18px, $white 27px, $pink 27px, $pink 35px);
+  }
+}
+
+.chat__big-photo {
+  display: block;
+  width: 45px;
+  height: 45px;
+  margin: 7px 14px 0 0;
+}
+
+.chat__addressee {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 7px 14px 30px;
+  border-bottom: 1px solid $grey9;
+}
+
+.chat__addressee-info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 350px;
+}
+
+.chat__addressee-title {
+  width: 100%;
+  margin: 0 0 2px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 24px;
+
+}
+
+.chat__addressee-city {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  color: $grey1;
+}
+
+.chat__rating {
+  margin: 7px 14px 0 auto;
+}
+
+.chat__close-btn {
+  margin: 2px 0 0;
+}

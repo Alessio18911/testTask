@@ -11,28 +11,27 @@
 <body>
   <div class="wrapper">
     <section class="chat">
-      <div class="chat__header">
-        <section class="chat__addressee">
-          <div class="chat__addressee-info">
-            <img class="chat__big-photo" src="img/addressee.png" width="45" height="45" alt="Фото получателя" >
-            <h1 class="chat__addressee-title"></h1>
-            <p class="chat__addressee-city"></p>
-          </div>
-          <div class="chat__rating rating">
-            <input type="radio" name="rating" id="rating-5">
-            <label for="rating-5"></label>
-            <input type="radio" name="rating" id="rating-4">
-            <label for="rating-4"></label>
-            <input type="radio" name="rating" id="rating-3">
-            <label for="rating-3"></label>
-            <input type="radio" name="rating" id="rating-2">
-            <label for="rating-2"></label>
-            <input type="radio" name="rating" id="rating-1">
-            <label for="rating-1"></label>
-          </div>
-          <button class="chat__close-btn close-btn" type="button"></button>
-        </section>
-      </div>
+      <section class="chat__addressee">
+        <img class="chat__big-photo" src="img/addressee.png" width="45" height="45" alt="Фото получателя" >
+        <div class="chat__addressee-info">
+          <h1 class="chat__addressee-title">Токсикова Ольга</h1>
+          <p class="chat__addressee-city">Днепропетровск</p>
+        </div>
+        <div class="chat__rating rating">
+          <input class="visually-hidden" type="radio" name="rating" id="rating-5">
+          <label class="rating__label" for="rating-5"></label>
+          <input class="visually-hidden" type="radio" name="rating" id="rating-4">
+          <label class="rating__label" for="rating-4"></label>
+          <input class="visually-hidden" type="radio" name="rating" id="rating-3">
+          <label class="rating__label" for="rating-3"></label>
+          <input class="visually-hidden" type="radio" name="rating" id="rating-2">
+          <label class="rating__label" for="rating-2"></label>
+          <input class="visually-hidden" type="radio" name="rating" id="rating-1">
+          <label class="rating__label" for="rating-1"></label>
+        </div>
+        <button class="chat__close-btn close-btn" type="button"></button>
+      </section>
+
       <div class="chat__messages">
         <ul class="chat__messages-list">
           <li class="chat__messages-item">

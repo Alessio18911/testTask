@@ -1,0 +1,23 @@
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.rating__label {
+  width: 18px;
+  height: 16px;
+  background-image: url("../../img/star-black.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  transition: background-image 0.3s;
+  cursor: url(../../img/hand.png), auto;
+}
+
+.rating__label:hover,
+.rating__label:hover ~ .rating__label {
+  background-image: url("../../img/star-colored.png");
+}
+
+input:checked ~ .rating__label {
+  background-image: url("../../img/star-colored.png");
+}
