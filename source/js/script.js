@@ -15,7 +15,7 @@ window.onload = function() {
 
       textarea.value = "";
       scrollWindow();
-      changeColor(newMessage);
+      newMessage.classList.remove("chat__messages-item--just-sent");
     }
   });
 
@@ -50,11 +50,5 @@ window.onload = function() {
     messagesList.appendChild(newMessage);
 
     return newMessage;
-  }
-
-  function changeColor(newMessage) {
-    setTimeout(function() {
-      newMessage.classList.remove("chat__messages-item--just-sent");
-    }, 0.1);
   }
 };
